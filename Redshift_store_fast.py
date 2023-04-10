@@ -15,7 +15,7 @@ cursor=con.cursor()
 
 print('copy to redshift')
 
-sql_COPY_query = f"""COPY aprende.vw_aprende_comms FROM 's3://bucket/.csv' IAM_ROLE 'arn:aws:iam::' DELIMITER '|' IGNOREHEADER as 1 CSV;"""
+sql_COPY_query = f"""COPY  FROM 's3://bucket/.csv' IAM_ROLE 'arn:aws:iam::' DELIMITER '|' IGNOREHEADER as 1 CSV;"""
 print(sql_COPY_query)
 cursor.execute(sql_COPY_query)
 con.commit()
